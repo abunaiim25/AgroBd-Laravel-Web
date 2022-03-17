@@ -1,0 +1,58 @@
+/*=============read more read less===============*/
+.text{
+    text-align: justify!important;
+    padding-top: 15px!important;
+    padding-bottom: 2px!important;
+}
+
+.read-more-btn{
+    padding: 10px 10px!important;
+    background-color: #81B622!important;
+    border: none;
+    color: white!important;
+    border-radius: 5px!important;
+}
+
+.more-text{
+    display: none!important;
+}
+
+.text.show-more .more-text{
+    display: inline!important;
+}
+
+/*==============Our team================*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+.column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+}
+.title {
+    color: grey;
+}
+.button:hover {
+    background-color: #555;
+}
+@media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+}

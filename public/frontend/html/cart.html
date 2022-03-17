@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
+
+  <link rel="stylesheet" href="../css/style_cart.css">
+  <!--stackpath bootstrap-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <!--bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!--font awesome cdn link-->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <!---->
+  <link rel="stylesheet" href="../Poppins/Poppins-Bold.ttf">
+
+</head>
+
+<body>
+
+  <!--Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light py-2 fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <h2><strong> Online<span style="color: coral;">-Marketing</span></strong></h2>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i id="bar" class="fas fa-bars"></i></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav ml-auto">
+
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="shop.html">Shop</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="blog.html">Blog</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="about.html">About</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="contact.html">Contact Us</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="cart.html"  class="nav-link active" aria-current="page"><i class="fal fa-shopping-bag"></i></a>   
+          </li>
+          
+          <li class="nav-item">
+            <a href=""  class="nav-link " aria-current="page"><i class="fal fa-search"></i></a>
+           </li>
+
+
+
+      </div>
+    </div>
+  </nav>
+
+
+
+  <section id="cart-home " class="mt-5 pt-5 container">
+    <h2 class="font-weight-bold ">Shopping Cart</h2>
+    <hr>
+  </section>
+
+
+  <section class="cart container py-5 mb-5">
+    <table width="100%">
+
+      <thead>
+        <tr>
+          <td>Product</td>
+          <td>Image</td>
+          <td>Price</td>
+          <td>Quantity</td>
+          <td>Total</td>
+          <td>Remove</td>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>
+            <p class="font-weight-bold">Shoe Niky</p>
+          </td>
+          <td><img class="img-fluid" src="../image/shoe1.jpg" alt=""></td>
+          <td>
+            <p><small> 200TK</small></p>
+          </td>
+          <td><input style="width: 50px;" value="1" type="number"></td>
+          <td>
+            <p><small> 1200TK</small></p>
+          </td>
+          <td><a href="#"><i class="fas fa-trash"></i></a></td>
+        </tr>
+
+        <tr>
+          <td>
+            <p class="font-weight-bold">Shoe Niky</p>
+          </td>
+          <td><img class="img-fluid" src="../image/shoe2.jpg" alt=""></td>
+          <td>
+            <p><small> 200TK</small></p>
+          </td>
+          <td><input style="width: 50px;" value="1" type="number"></td>
+          <td>
+            <p><small> 1200TK</small></p>
+          </td>
+          <td><a href="#"><i class="fas fa-trash"></i></a></td>
+        </tr>
+
+        <tr>
+          <td>
+            <p class="font-weight-bold">Shoe Niky</p>
+          </td>
+          <td><img class="img-fluid" src="../image/shoe.jpg" alt=""></td>
+          <td>
+            <p><small> 200TK</small></p>
+          </td>
+          <td><input style="width: 50px;" value="1" type="number"></td>
+          <td>
+            <p><small> 1200TK</small></p>
+          </td>
+          <td><a href="#"><i class="fas fa-trash"></i></a></td>
+        </tr>
+
+
+      </tbody>
+
+    </table>
+  </section>
+
+
+  <section class="cart-bottom container">
+    <div class="row">
+
+      <div class="coupon col-lg-6 col-md-6 col-12 mb-5">
+        <div class="border">
+          <h5>COUPON</h5>
+          <div class="padding">
+            <p>Enter your coupon code if you have one</p>
+            <input type="text" placeholder="Coupon Code">
+            <button class="apply-btn">APPLY COUPON</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="total col-lg-6 col-md-6 col-12 mb-5">
+        <div class="border">
+          <h5>CART TOTAL</h5>
+          <div class="padding">
+            <div class="d-flex justify-content-between">
+              <h6>Subtotal</h6>
+              <p>1200TK</p>
+            </div>
+            <div class="d-flex justify-content-between">
+              <h6>Shipping</h6>
+              <p>1200TK</p>
+            </div>
+
+            <hr class="second-hr">
+            <div class="d-flex justify-content-between">
+              <h6>Total</h6>
+              <p>1200TK</p>
+            </div>
+
+
+              <div class=" text-right mb-3">
+               <button>PROCEED TO CHECKOUT</button>
+              </div>
+         
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <footer class=" pb-3">
+    <div class="row container mx-auto pt-5">
+
+      <div class="footer-one col-lg-3 col-md-6 col-12">
+        <h2><strong><span style="color: white;">Online</span><span style="color: coral;">-Marketing</span></strong></h2>
+        <p class="pt-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+          the industry's standard dummy text ever since the 1500s, </p>
+      </div>
+
+      <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+        <h5 class="pb-2">Featured</h5>
+        <ul class="text-uppercase list-unstyled">
+          <li><a href="">Men</a></li>
+          <li><a href="">Women</a></li>
+          <li><a href="">Boys</a></li>
+          <li><a href="">Girls</a></li>
+          <li><a href="">Shoe</a></li>
+          <li><a href="">Cloths</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+        <h5 class="pb-2">Contact Us</h5>
+
+        <div>
+          <h6 class="text-uppercase">Address</h6>
+          <p>123 STREET NAME, CITY, US</p>
+        </div>
+
+        <div>
+          <h6 class="text-uppercase">Phone</h6>
+          <p>01316057864</p>
+        </div>
+
+        <div>
+          <h6 class="text-uppercase">Email</h6>
+          <p class="text-lowercase">abunaiim@gamil.com</p>
+        </div>
+
+      </div>
+
+      <div class="footer-one col-lg-3 col-md-6 col-12">
+        <h5 class="pb-2">Our Items</h5>
+        <div class="row">
+          <img style="height: 50px; width: 100px;" class="img-fluid  m-2" src="../image/shoe1.jpg" alt="">
+          <img style="height: 50px; width: 100px;" class="img-fluid  m-2" src="../image/shoe2.jpg" alt="">
+          <img style="height: 50px; width: 100px;" class="img-fluid  m-2" src="../image/shoe1.jpg" alt="">
+          <img style="height: 50px; width: 100px;" class="img-fluid  m-2" src="../image/shoe2.jpg" alt="">
+          <img style="height: 50px; width: 100px;" class="img-fluid  m-2" src="../image/shoe1.jpg" alt="">
+          <img style="height: 50px; width: 100px;" class="img-fluid  m-2" src="../image/shoe2.jpg" alt="">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="copyright mt-4">
+      <div class="row container mx-auto">
+
+
+        <div class="col-lg-6  col-12 text-nowrap mb-2">
+          <p>Online-Marketing eCommerce © 2022. All Rigths Reserved</p>
+        </div>
+
+        <div class="col-lg-6  col-12">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+
+
+      </div>
+    </div>
+  </footer>
+
+
+  <!--=====back to top button (using JS)=====-->
+  <a href="#" class="to-top">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+
+
+  <script src="../js/main.js"></script>
+  <!--bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

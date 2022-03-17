@@ -1,0 +1,67 @@
+/*============blog===================*/
+.blog .post .post-img {
+    overflow: hidden !important;
+    cursor: pointer !important;
+}
+
+.blog .post img {
+    transition: 00.5s ease !important;
+}
+
+.blog .post:hover img {
+    transform: scale(1.3) rotate(-10deg) !important;
+    opacity: 0.8 !important;
+}
+
+.blog .post:hover h6 {
+    color: #81B622 !important;
+}
+
+.blog .post h6 {
+    cursor: pointer !important;
+    transition: 00.5s ease !important;
+}
+/*How to place text over an image*/
+.blog .post .post-img {
+    position: relative !important;
+}
+.blog .post .post-img .top-left {
+    position: absolute !important;
+    top: 5px !important;
+    left: 5px !important;
+}
+
+
+
+/*=====banner=====*/
+#banner {
+    /*bg image*/
+    width: 100% !important;
+    height: 60vh !important;
+    background-size: cover !important;
+    background-position: top 70px center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    /*item middle*/
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+}
+
+#banner button {
+    background-color: #81B622 !important;
+}
+
+/*==============pagination===========*/
+.pagination a {
+    color: #000 !important;
+}
+body > section > nav > ul > li.page-item.active > a {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+body > section > nav > ul > li:nth-child(n):hover > a {
+    background-color: #81B622 !important;
+    color: #fff !important;
+}

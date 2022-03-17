@@ -1,0 +1,1 @@
+<h1 style="display:flex;justify-content:center; margin-top:20%; text-align:center; color:red;">This will be a new 404 page</h1> 
