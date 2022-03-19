@@ -2,7 +2,7 @@
 
 
 @section('title')
-    Online Marketing - Search Product
+    Online Marketing - Business Search Product
 @endsection
 
 @php
@@ -16,34 +16,32 @@ $front = App\Models\FrontControl::first();
         <!--product-->
         <div class="">
             <div class="py-5">
-                <h2 class="font-weigth-bold"><strong>Search Product</strong></h2>
+                <h2 class="font-weigth-bold"><strong>Business Search Product</strong></h2>
                 <hr>
             </div>
 
             <div class="row mx-auto ">
 
-                @foreach ($products as $product)
+                @foreach ($business as $item)
                     <div class="product text-center col-lg-3 col-md-6 col-12">
-                        <a href="{{ url('product_details/' . $product->id) }}">
+                        <a href="{{ url('business_product_details/' . $item->id) }}">
                             <img class="img-fluid mb-3"
-                                src="{{ asset('img_DB/product/image_one/' . $product->image_one) }}" alt="">
-
-                            <h3>{{ $product->product_name }}</h3>
-                            <h6 class="p-price">Price: {{ $product->price }} TK</h6>
+                                src="{{ asset('img_DB/my_business/image_one/' . $item->image_one) }}" alt="">
+                            <h3>{{ $item->product_name }}</h3>
+                            <h6 class="p-price">Price: {{ $item->price }} TK</h6>
                             <button class="buy-btn button-style">Details</button>
                         </a>
                     </div>
                 @endforeach
 
             </div>
-
         </div>
 
 
         <!--pagination-->
         <div class="d-flex mt-5">
             {{-- (paginate) ->Providers\AppServiceProvider.php --}}
-            {{ $products->links() }}
+            {{ $business->links() }}
             {{-- {{$appoint->onEachSide(1)-> links()}} --}}
         </div>
     </section>

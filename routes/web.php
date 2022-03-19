@@ -194,6 +194,7 @@ Route::get('about',[AboutController::class,'about_page']);
 //=====================Search===========================
 Route::get('search_product_item',[SearchController::class,'search_product_item']);
 Route::get('search_news_query',[SearchController::class,'search_news_query']);
+Route::get('search_business_query',[SearchController::class,'search_business_query']);
 
 //===================contact=====================
 Route::get('contact',[ContactController::class,'contact']);
@@ -279,6 +280,10 @@ Route::get('profile_business_product_details/{id}',[MybusinessController::class,
 Route::get('edit_business/{id}',[MybusinessController::class,'edit_business']);
 Route::post('add_business_update/{id}',[MybusinessController::class,'add_business_update']);
 Route::get('delete_business/{id}',[MybusinessController::class,'delete_business']);
+Route::get('business_zero/{id}',[MybusinessController::class,'business_zero']);
+Route::get('business_one/{id}',[MybusinessController::class,'business_one']);
+
+
 //add-rating
 Route::post('business_add_rating',[MybusinessController::class,'business_add_rating']);
 //add_review_business
@@ -288,6 +293,7 @@ Route::get('edit_review_business/{id}',[MybusinessController::class, 'editreview
 Route::put('update_review_business/{id}',[MybusinessController::class, 'update']);
 Route::get('delete_review_business/{id}',[MybusinessController::class, 'delete']);
 Route::get('review_more_business/{id}',[MybusinessController::class, 'review_more_business']);
+
 });
 
 

@@ -5,17 +5,17 @@
 @endsection
 
 @section('search')
- {{--sesrch--}}
- <ul class="navbar-nav w-100">
-    <li class="nav-item w-100">
+    {{-- sesrch --}}
+    <ul class="navbar-nav w-100">
+        <li class="nav-item w-100">
 
-      <form  action="{{url('brand_search')}}" method="GET" class="nav-link mt-2 mt-md-0  d-lg-flex search">
-        {{csrf_field()}}
-        <input type="text" name="search"  class="form-control bg-white" placeholder="search brands">
-      </form>
-      
-    </li>
-  </ul>
+            <form action="{{ url('brand_search') }}" method="GET" class="nav-link mt-2 mt-md-0  d-lg-flex search">
+                {{ csrf_field() }}
+                <input type="text" name="search" class="form-control bg-white" placeholder="search brands">
+            </form>
+
+        </li>
+    </ul>
 @endsection
 
 @section('admin_content')
@@ -51,9 +51,8 @@
                         @endif
 
 
-                        <div class="table-wrapper "  style="overflow: auto">
+                        <div class="table-wrapper " style="overflow: auto">
                             @if ($brands->count() > 0)
-
                                 <table id="datatable1" class="table display responsive nowrap text-white">
                                     <thead>
                                         <tr>
@@ -82,7 +81,10 @@
                                                     <a href="{{ url('admin_brand_edit/' . $row->id) }}"
                                                         class="btn btn-sm btn-success"><i class="fa fa-pencil"></i></a>
                                                     <a href="{{ url('admin_brand_delete/' . $row->id) }}"
-                                                        class="btn btn-sm btn-danger" onclick="return confirm('Are You Sure To Delete?')"><i class="fa fa-trash"></i></a>
+                                                        class="btn btn-sm btn-danger"
+                                                        onclick="return confirm('Are You Sure To Delete?')"><i
+                                                            class="fa fa-trash"></i></a>
+
                                                     @if ($row->status == 1)
                                                         <a href="{{ url('admin_brand_inactive/' . $row->id) }}"
                                                             class="btn btn-sm btn-danger"><i
@@ -97,7 +99,6 @@
                                         @endforeach
                                     </tbody>
                                 </table>
-
                             @else
                                 <h2 class="text-center p-5">Brands Not Available</h2>
                             @endif
@@ -125,7 +126,7 @@
                                 @csrf
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Brand Name</label>
-                                    <input type="text"  style="color: black" name="brand_name"
+                                    <input type="text" style="color: black" name="brand_name"
                                         class="form-control bg-white @error('brand_name') is-invalid @enderror"
                                         id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Brand">
 

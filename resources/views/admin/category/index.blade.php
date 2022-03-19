@@ -6,17 +6,17 @@
 @endsection
 
 @section('search')
- {{--sesrch--}}
- <ul class="navbar-nav w-100">
-    <li class="nav-item w-100">
+    {{-- sesrch --}}
+    <ul class="navbar-nav w-100">
+        <li class="nav-item w-100">
 
-      <form  action="{{url('category_search')}}" method="GET" class="nav-link mt-2 mt-md-0  d-lg-flex search">
-        {{csrf_field()}}
-        <input type="text" name="search"  class="form-control bg-white" placeholder="search categories">
-      </form>
-      
-    </li>
-  </ul>
+            <form action="{{ url('category_search') }}" method="GET" class="nav-link mt-2 mt-md-0  d-lg-flex search">
+                {{ csrf_field() }}
+                <input type="text" name="search" class="form-control bg-white" placeholder="search categories">
+            </form>
+
+        </li>
+    </ul>
 @endsection
 
 @section('admin_content')
@@ -52,59 +52,62 @@
                             </div>
                         @endif
 
-                        <div class="table-wrapper"  style="overflow: auto">
+                        <div class="table-wrapper" style="overflow: auto">
 
                             @if ($categories->count() > 0)
-
-                            <table id="datatable1" class="table  text-white">
-                                <thead>
-                                    <tr>
-                                        <th class="wd-15p">Sl</th>
-                                        <th class="wd-15p">Category Name</th>
-                                        <th class="wd-20p">Status</th>
-                                        <th class="wd-25p">Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-
-
-                                    <?php $i = $categories->perPage()*($categories->currentPage()-1) ?>
-
-                                    @foreach ($categories as $category)
+                                <table id="datatable1" class="table  text-white">
+                                    <thead>
                                         <tr>
-                                            <td> <?php $i++ ?> {{ $i }}</td>
-                                            <td>{{ $category->category_name }}</td>
-                                            <td>
-                                                @if ($category->status == 1)
-                                                    <span class="badge badge-success">Active</span>
-                                                @else
-                                                    <span class="badge badge-danger">Inactive</span>
-                                                @endif
-                                            </td>
-                                            <td>
-                                                <a href="{{ url('admin_categories_edit/' . $category->id) }}"
-                                                    class="btn btn-sm btn-success"><i class="fa fa-pencil"></i></a>
-                                                <a href="{{ url('admin_categories_delete/' . $category->id) }}"
-                                                    class="btn btn-sm btn-danger" onclick="return confirm('Are You Sure To Delete?')"><i class="fa fa-trash"></i></a>
-
-                                                @if ($category->status == 1)
-                                                    <a href="{{ url('admin_categories_inactive/' . $category->id) }}"
-                                                        class="btn btn-sm btn-danger"><i class="fa fa-arrow-down"></i></a>
-                                                @else
-                                                    <a href="{{ url('admin_categories_active/' . $category->id) }}"
-                                                        class="btn btn-sm btn-success"><i class="fa fa-arrow-up"></i></a>
-                                                @endif
-
-                                            </td>
+                                            <th class="wd-15p">Sl</th>
+                                            <th class="wd-15p">Category Name</th>
+                                            <th class="wd-20p">Status</th>
+                                            <th class="wd-25p">Action</th>
                                         </tr>
-                                    @endforeach
+                                    </thead>
+                                    <tbody>
 
-                                </tbody>
-                            </table>
+
+                                        <?php $i = $categories->perPage() * ($categories->currentPage() - 1); ?>
+
+                                        @foreach ($categories as $category)
+                                            <tr>
+                                                <td> <?php $i++; ?> {{ $i }}</td>
+                                                <td>{{ $category->category_name }}</td>
+                                                <td>
+                                                    @if ($category->status == 1)
+                                                        <span class="badge badge-success">Active</span>
+                                                    @else
+                                                        <span class="badge badge-danger">Inactive</span>
+                                                    @endif
+                                                </td>
+                                                <td>
+                                                    <a href="{{ url('admin_categories_edit/' . $category->id) }}"
+                                                        class="btn btn-sm btn-success"><i class="fa fa-pencil"></i></a>
+                                                    <a href="{{ url('admin_categories_delete/' . $category->id) }}"
+                                                        class="btn btn-sm btn-danger"
+                                                        onclick="return confirm('Are You Sure To Delete?')"><i
+                                                            class="fa fa-trash"></i></a>
+
+                                                    @if ($category->status == 1)
+                                                        <a href="{{ url('admin_categories_inactive/' . $category->id) }}"
+                                                            class="btn btn-sm btn-danger"><i
+                                                                class="fa fa-arrow-down"></i></a>
+                                                    @else
+                                                        <a href="{{ url('admin_categories_active/' . $category->id) }}"
+                                                            class="btn btn-sm btn-success"><i
+                                                                class="fa fa-arrow-up"></i></a>
+                                                    @endif
+
+                                                </td>
+                                            </tr>
+                                        @endforeach
+
+                                    </tbody>
+                                </table>
                             @else
-                            <h2 class="text-center p-5">Categories Not Available</h2>
+                                <h2 class="text-center p-5">Categories Not Available</h2>
                             @endif
-                            
+
                         </div><!-- table-wrapper -->
                     </div><!-- card -->
                 </div>
@@ -151,11 +154,9 @@
 
 
         <div class="d-flex my-5">
-            {{--(paginate) ->Providers\AppServiceProvider.php --}}
-            {{$categories->links()}}
-       {{--
-            {{$appoint->onEachSide(1)-> links()}}
-       --}}
-       </div>
+            {{-- (paginate) ->Providers\AppServiceProvider.php --}}
+            {{ $categories->links() }}
+            {{-- {{$appoint->onEachSide(1)-> links()}} --}}
+        </div>
 
     @endsection

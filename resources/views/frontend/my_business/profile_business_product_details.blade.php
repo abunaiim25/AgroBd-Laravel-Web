@@ -12,10 +12,20 @@
             <h3><a style="text-decoration: none;color:black;" href="{{ url('business_profile') }}">My Business Profile</a>
                 /
                 {{ $business->category }}</h3>
+
         </div>
 
 
         <div class="p-3" style="float:right; background:wheat; border-radius:5px; ">
+
+            @if ($business->status == 1)
+                <a href="{{ url('business_zero/' . $business->id) }}" class="btn float-end bg-danger badge text-white "><i
+                        class="fa fa-arrow-down"></i></a>
+            @else
+                <a href="{{ url('business_one/' . $business->id) }}" class="btn float-end bg-success badge text-white "><i
+                        class="fa fa-arrow-up"></i></a>
+            @endif
+
             <a href="{{ url('delete_business/' . $business->id) }}" class="float-end bg-danger badge text-white mx-1"
                 onclick="return confirm('Are You Sure To Delete?')"> <i class="fa fa-trash"></i></a>
 
@@ -131,7 +141,7 @@
         </div>
 
 
-       
+
 
     </section>
 @endsection

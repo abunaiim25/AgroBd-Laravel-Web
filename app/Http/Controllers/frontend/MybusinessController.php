@@ -116,7 +116,7 @@ class MybusinessController extends Controller
     //=============profile==============================
     public function business_profile()
     {
-        $business = MyBusiness::where('user_id', Auth::id())->where('status', 1)->latest()->paginate(16);
+        $business = MyBusiness::where('user_id', Auth::id())->latest()->paginate(16);
         return view('frontend.my_business.business_profile', compact('business'));
     }
 
@@ -217,6 +217,24 @@ class MybusinessController extends Controller
         MyBusiness::find($id)->delete();
         return Redirect('business_profile')->with('status', 'Business Product Deleted Successfully');
     }
+
+    public function business_zero($id)
+    {
+        $business = MyBusiness::findOrFail($id);
+        $business->status= '0';
+        $business->save();
+        return redirect()->back()->with('status','Business Product Status Inactive.');
+    }
+
+    public function business_one($id)
+    {
+        $business = MyBusiness::findOrFail($id);
+        $business->status= '1';
+        $business->save();
+        return redirect()->back()->with('status','Business Product Status Active.');
+    }
+
+
 
 
     //=======================Rating==============================

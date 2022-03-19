@@ -40,7 +40,7 @@ $front = App\Models\FrontControl::first();
         <div class="container text-center mt-5 py-5">
             <h3><strong>Our Latest Product</strong></h3>
             <hr class="mx-auto">
-            <p>Here you can check out our new product with fair price on Online-Marketing</p>
+            <p>Here you can check out our new product with fair price on AgroBd</p>
         </div>
 
 

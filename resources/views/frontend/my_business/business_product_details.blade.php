@@ -73,7 +73,7 @@
 
     {{-- search --}}
     <div class="" style="float:right">
-        <form action="{{ url('search_news_query') }}" method="GET" class="search-form">
+        <form action="{{ url('search_business_query') }}" method="GET" class="search-form">
             {{ csrf_field() }}
             <div class="form-group">
                 <div style="display: flex; justify-content: space-between;">
@@ -323,7 +323,7 @@
                 @foreach ($lts_business as $product)
                     <li class="item-a">
                         <div class="product text-center " style="width: 300px;">
-                            <a href="{{ url('product_details/' . $product->id) }}">
+                            <a href="{{ url('business_product_details/' . $product->id) }}">
                                 <img class="img-fluid mb-3"
                                     src="{{ asset('img_DB/my_business/image_one/' . $product->image_one) }}" alt="">
 

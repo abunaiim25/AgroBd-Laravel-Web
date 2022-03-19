@@ -22,7 +22,7 @@ $front = App\Models\FrontControl::first();
 
             {{-- search --}}
             <div class="" style="float:right">
-                <form action="{{ url('search_news_query') }}" method="GET" class="search-form">
+                <form action="{{ url('search_business_query') }}" method="GET" class="search-form">
                     {{ csrf_field() }}
                     <div class="form-group">
                         <div style="display: flex; justify-content: space-between;">
@@ -71,9 +71,10 @@ $front = App\Models\FrontControl::first();
                 @endforeach
 
             </div>
-
         </div>
 
+        
+ 
 
         <!--pagination-->
         <div class="d-flex mt-5">

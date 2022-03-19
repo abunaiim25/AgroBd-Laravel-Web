@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Business\MyBusiness;
 use App\Models\Category;
 use App\Models\Order;
 use App\Models\Product;
@@ -21,7 +22,8 @@ class HomeController extends Controller
                 //$lts_p = Product::where('status',1)->latest()->limit(3)->get();
                 $products_old = Product::where('status',1)->paginate(8);
                 $categories = Category::where('status',1)->latest()->get();
-                return view('frontend.index',compact('products','categories','products_old'));
+                $lts_business = MyBusiness::where('status', 1)->latest()->get();
+                return view('frontend.index',compact('products','categories','products_old','lts_business'));
             }else
             {
             // =================== Order ==========================
@@ -47,7 +49,8 @@ public function index()
         //$lts_p = Product::where('status',1)->latest()->limit(3)->get();
         $products_old = Product::where('status',1)->paginate(8);
         $categories = Category::where('status',1)->latest()->get();
-    return view('frontend.index',compact('products','categories','products_old'));
+        $lts_business = MyBusiness::where('status', 1)->latest()->get();
+    return view('frontend.index',compact('products','categories','products_old','lts_business'));
 }
 
 }
