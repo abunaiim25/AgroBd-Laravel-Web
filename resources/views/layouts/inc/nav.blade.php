@@ -77,6 +77,7 @@ $front = App\Models\FrontControl::first();
                 </li>
 
 
+
                 <li class="nav-item">
                     <form action="{{ url('search_product_item') }}" method="GET" class="search-form">
                         {{ csrf_field() }}
@@ -86,7 +87,8 @@ $front = App\Models\FrontControl::first();
                                 <i class="search fal fa-search"></i>
                             </div>
                             <div class="input">
-                                <input type="text" name="query" id="query" class="form-control" placeholder="search products..." >
+                                <input type="text" name="query" id="query" class="form-control"
+                                    placeholder="search products...">
                                 <i class="clear fa fa-times"></i>
                             </div>
                         </div>

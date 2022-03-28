@@ -22,7 +22,7 @@
                 <div class="hero__categories">
                     <div class="hero__categories__all">
                         <i class="fa fa-bars"></i>
-                        <span style="color: black">All Category</span>
+                        <span >All Category</span>
                     </div>
 
                     @php
@@ -32,7 +32,7 @@
                         <ul>
                             @foreach ($categories as $row)
                                 <li><a
-                                        href="{{ url('category_product_show/' . $row->id) }}">{{ $row->category_name }}</a>
+                                       href="{{ url('category_product_show/' . $row->id) }}">{{ $row->category_name }}</a>
                                 </li>
                             @endforeach
                         </ul>

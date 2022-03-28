@@ -12,6 +12,8 @@ $front = App\Models\FrontControl::first();
 @section('frontend_content')
     <!--Background Image-->
     <section id="home" style=" background-image: url({{ asset('img_DB/front/home/' . $front->home_bg_img) }});  ">
+       
+
         <div class="container bg_text">
             <h5 class="w-50">{{ $front->home_bg_txt1 }}</h5>
             <h1 class="w-50"><b><span>{{ $front->home_bg_txt2 }}</span></b></h1>
@@ -20,18 +22,20 @@ $front = App\Models\FrontControl::first();
         </div>
     </section>
 
-
+    
+                <!--====================day Night Slider=========================-->
+     
     <!--Brand-->
     <!--    <section id="brand" class="container">
-                     <div class="row m-0 py-5">
-                   <img  class="img-fluid col-lg-2 col-md-4 col-6" src="{{ asset('frontend') }}/image/nike.png" alt="">
-                    <img  class="img-fluid col-lg-2 col-md-4 col-6 " src="{{ asset('frontend') }}/image/nike.png" alt="">
-                     <img  class="img-fluid col-lg-2 col-md-4 col-6 " src="{{ asset('frontend') }}/image/nike.png" alt="">
-                   <img  class="img-fluid col-lg-2 col-md-4 col-6 " src="{{ asset('frontend') }}/image/nike.png" alt="">
-                     <img  class="img-fluid col-lg-2 col-md-4 col-6 " src="{{ asset('frontend') }}/image/nike.png" alt="">
-                      </div>
-                       </section>
-                     -->
+                         <div class="row m-0 py-5">
+                       <img  class="img-fluid col-lg-2 col-md-4 col-6" src="{{ asset('frontend') }}/image/nike.png" alt="">
+                        <img  class="img-fluid col-lg-2 col-md-4 col-6 " src="{{ asset('frontend') }}/image/nike.png" alt="">
+                         <img  class="img-fluid col-lg-2 col-md-4 col-6 " src="{{ asset('frontend') }}/image/nike.png" alt="">
+                       <img  class="img-fluid col-lg-2 col-md-4 col-6 " src="{{ asset('frontend') }}/image/nike.png" alt="">
+                         <img  class="img-fluid col-lg-2 col-md-4 col-6 " src="{{ asset('frontend') }}/image/nike.png" alt="">
+                          </div>
+                           </section>
+                         -->
 
 
     <!--product-->
