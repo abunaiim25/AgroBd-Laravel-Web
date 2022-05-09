@@ -86,9 +86,11 @@
         </script>
     @endif
 
+    {{--
 <!--day Night Js-->
 <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 <script type="text/javascript" src="{{ asset('frontend') }}/js/dark.js"></script>
+--}}
 
 </body>
 
