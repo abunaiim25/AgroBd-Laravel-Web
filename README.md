@@ -1,9 +1,14 @@
 # AgroBd (Agricultural Shop)
 
-# Feature: Authentication, Profile, Admin Panel, Search, Users Business Shop, Users Business Profile, Admin Shop, Category wise Product, Product Details, Checkout, Contact, Cart, Payment, Wishlist, Favorite, Order, Discount, Rating, Review, News, About.
+![agrobd](https://user-images.githubusercontent.com/75266387/215327808-daf90bbd-d3d1-4b53-b97f-f5cfe9f7342a.png)
 
-# Tools: HTML, CSS, Bootstrap, JavaScript, Jquery, PHP Laravel, MySQL (Web).
+## Feature: 
+Authentication, Profile, Admin Panel, Search, Users Business Shop, Users Business Profile, Admin Shop, Category wise Product, Product Details, Checkout, Contact, Cart, Payment, Wishlist, Favorite, Order, Discount, Rating, Review, News, About.
 
+## Tools: 
+HTML, CSS, Bootstrap, JavaScript, Jquery, PHP Laravel, MySQL (Web).
+
+## About Application:
 At present farmers and retailers do not get the right price for their produce. With this
 problem in mind, we want to create a social media medium where buyers and sellers can
 buy and sell independently. Farmers will have their own profiles. Each seller will show
